@@ -72,6 +72,7 @@ class FirstViewController: UIViewController {
         println("【按钮】跳转统计")
         btDiscoverySharedInstance.bleService?.reset()
         self.tabBarController?.selectedIndex = 1
+        DataManager.LoadData()
     }
 }
 

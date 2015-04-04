@@ -29,7 +29,7 @@ class BTDiscovery: NSObject, CBCentralManagerDelegate {
             central.scanForPeripheralsWithServices([BLEServiceUUID], options: nil)
         }
     }
-    
+
     var bleService: BTService? {
         didSet {
             if let service = self.bleService {
@@ -104,7 +104,6 @@ class BTDiscovery: NSObject, CBCentralManagerDelegate {
     }
     
     // MARK: - Private
-    
     func clearDevices() {
         self.bleService = nil
         self.peripheralBLE = nil
