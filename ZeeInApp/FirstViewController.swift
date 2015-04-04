@@ -17,6 +17,7 @@ class FirstViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -32,12 +33,18 @@ class FirstViewController: UIViewController {
         // Start the Bluetooth discovery process
         btDiscoverySharedInstance
     }
-
+    
     func receivedValue(notification: NSNotification){
         let userInfo = notification.userInfo as [String: String]
-        let value = userInfo["value"]
-        println("received = \(value)")
+        let values:[String]! = userInfo["value"]?.componentsSeparatedByString("\t")
+        
+        dispatch_async(dispatch_get_main_queue(), {
+            self.label1.text = values[0]
+            self.label2.text = values[1]
+            self.label3.text = values[2]
+        });
     }
+    
     
     func connectionChanged(notification: NSNotification) {
         // Connection status changed. Indicate on GUI.
@@ -63,6 +70,7 @@ class FirstViewController: UIViewController {
     @IBAction func jump() {
         //跳转按钮
         println("【按钮】跳转统计")
+        btDiscoverySharedInstance.bleService?.reset()
         self.tabBarController?.selectedIndex = 1
     }
 }
