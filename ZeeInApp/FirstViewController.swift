@@ -9,11 +9,22 @@
 import UIKit
 
 class FirstViewController: UIViewController {
+
     
     @IBOutlet weak var imgBluetoothStatus: UIImageView!
     @IBOutlet weak var label1: UILabel!
     @IBOutlet weak var label2: UILabel!
     @IBOutlet weak var label3: UILabel!
+    
+    var isPracticing: Bool? {
+        didSet {
+            if isPracticing == false{
+                
+            }else{
+            
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,9 +38,6 @@ class FirstViewController: UIViewController {
     }
     
     private func connectBlueTooth() {
-        // Watch Bluetooth connection
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("connectionChanged:"), name: BLEServiceChangedStatusNotification, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("receivedValue:"), name: BLEServiceReceiveNotification, object: nil)
         // Start the Bluetooth discovery process
         btDiscoverySharedInstance
     }
@@ -62,17 +70,36 @@ class FirstViewController: UIViewController {
     }
     
     @IBAction func startPractice() {
-        //开始练习，如果蓝牙没有开启，请开启
         println("【按钮】开始练习")
+        // Watch Bluetooth connection
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("connectionChanged:"), name: BLEServiceChangedStatusNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("receivedValue:"), name: BLEServiceReceiveNotification, object: nil)
         connectBlueTooth()
+        isPracticing = true
+    }
+    
+    @IBAction func stopPractice() {
+        println("【按钮】结束练习")
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: BLEServiceChangedStatusNotification, object: nil)
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: BLEServiceReceiveNotification, object: nil)
+        isPracticing = false
+        dispatch_async(dispatch_get_main_queue(), {
+            self.label1.text = ""
+            self.label2.text = ""
+            self.label3.text = ""
+        });
     }
     
     @IBAction func jump() {
-        //跳转按钮
         println("【按钮】跳转统计")
-        btDiscoverySharedInstance.bleService?.reset()
         self.tabBarController?.selectedIndex = 1
-        DataManager.LoadData()
+    }
+    
+    func readAndWrite() {
+        var arr = DataManager.LoadData()
+        arr?.addObject("4")
+        println("\(arr)")
+        DataManager.SaveData(arr)
     }
 }
 

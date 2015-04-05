@@ -12,7 +12,6 @@ import CoreBluetooth
 let btDiscoverySharedInstance = BTDiscovery();
 
 class BTDiscovery: NSObject, CBCentralManagerDelegate {
-    
     private let centralManager: CBCentralManager?
     private var peripheralBLE: CBPeripheral?
     
@@ -22,6 +21,7 @@ class BTDiscovery: NSObject, CBCentralManagerDelegate {
         centralManager = CBCentralManager(delegate: self, queue: centralQueue)
         //        centralManager = CBCentralManager(delegate: self, queue: nil)
     }
+    
     
     func startScanning() {
         //        centralManager!.scanForPeripheralsWithServices(nil, options: nil)
@@ -38,11 +38,17 @@ class BTDiscovery: NSObject, CBCentralManagerDelegate {
         }
     }
     
+//    func disconnect(){
+//        现在不能用啊
+//        println("Disconnect!")
+//        centralManager?.cancelPeripheralConnection(self.peripheralBLE)
+//        clearDevices()
+//    }
+    
     // MARK: - CBCentralManagerDelegate
     func centralManager(central: CBCentralManager!, didDiscoverPeripheral peripheral: CBPeripheral!,
         advertisementData: [NSObject : AnyObject]!, RSSI: NSNumber!) {
             println("found peripheral")
-            
             // Be sure to retain the peripheral or it will fail during connection.
             
             // Validate peripheral information
@@ -83,8 +89,6 @@ class BTDiscovery: NSObject, CBCentralManagerDelegate {
         
         // Stop scanning for new devices
         central.stopScan()
-        
-        
     }
     
     func centralManager(central: CBCentralManager!, didDisconnectPeripheral peripheral: CBPeripheral!, error: NSError!) {
@@ -105,6 +109,7 @@ class BTDiscovery: NSObject, CBCentralManagerDelegate {
     
     // MARK: - Private
     func clearDevices() {
+        println("Clear Devices")
         self.bleService = nil
         self.peripheralBLE = nil
     }

@@ -66,6 +66,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		834D94281AD0DACC005839BA /* data */ = {
+			isa = PBXGroup;
+			children = (
+				833228D21AD0373700941A9A /* data1.plist */,
+				833228D01AD036B600941A9A /* DataManager.swift */,
+			);
+			name = data;
+			sourceTree = "<group>";
+		};
+		834D94291AD0DADA005839BA /* bluetooth */ = {
+			isa = PBXGroup;
+			children = (
+				83DCB27E1ACFAE6600CE06B8 /* BTDiscovery.swift */,
+				83DCB27F1ACFAE6600CE06B8 /* BTService.swift */,
+			);
+			name = bluetooth;
+			sourceTree = "<group>";
+		};
 		83DCB24E1ACFAA7E00CE06B8 = {
 			isa = PBXGroup;
 			children = (
@@ -87,10 +105,8 @@
 		83DCB2591ACFAA7E00CE06B8 /* ZeeInApp */ = {
 			isa = PBXGroup;
 			children = (
-				833228D21AD0373700941A9A /* data1.plist */,
-				833228D01AD036B600941A9A /* DataManager.swift */,
-				83DCB27E1ACFAE6600CE06B8 /* BTDiscovery.swift */,
-				83DCB27F1ACFAE6600CE06B8 /* BTService.swift */,
+				834D94291AD0DADA005839BA /* bluetooth */,
+				834D94281AD0DACC005839BA /* data */,
 				83DCB25C1ACFAA7E00CE06B8 /* AppDelegate.swift */,
 				83DCB25E1ACFAA7E00CE06B8 /* FirstViewController.swift */,
 				83DCB2601ACFAA7E00CE06B8 /* SecondViewController.swift */,
