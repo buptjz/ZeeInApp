@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		833228D11AD036B600941A9A /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833228D01AD036B600941A9A /* DataManager.swift */; };
 		833228D31AD0373700941A9A /* data1.plist in Resources */ = {isa = PBXBuildFile; fileRef = 833228D21AD0373700941A9A /* data1.plist */; };
+		838D04B01AD260DC007CC3EC /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838D04AF1AD260DC007CC3EC /* ThirdViewController.swift */; };
+		838D04B21AD263A3007CC3EC /* HelloScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838D04B11AD263A3007CC3EC /* HelloScene.swift */; };
+		838D04B91AD26767007CC3EC /* MyParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = 838D04B71AD26767007CC3EC /* MyParticle.sks */; };
+		838D04BA1AD26767007CC3EC /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 838D04B81AD26767007CC3EC /* spark.png */; };
 		83DCB25D1ACFAA7E00CE06B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DCB25C1ACFAA7E00CE06B8 /* AppDelegate.swift */; };
 		83DCB25F1ACFAA7E00CE06B8 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DCB25E1ACFAA7E00CE06B8 /* FirstViewController.swift */; };
 		83DCB2611ACFAA7E00CE06B8 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DCB2601ACFAA7E00CE06B8 /* SecondViewController.swift */; };
@@ -33,6 +37,10 @@
 /* Begin PBXFileReference section */
 		833228D01AD036B600941A9A /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		833228D21AD0373700941A9A /* data1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = data1.plist; sourceTree = "<group>"; };
+		838D04AF1AD260DC007CC3EC /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		838D04B11AD263A3007CC3EC /* HelloScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelloScene.swift; sourceTree = "<group>"; };
+		838D04B71AD26767007CC3EC /* MyParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MyParticle.sks; sourceTree = "<group>"; };
+		838D04B81AD26767007CC3EC /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
 		83DCB2571ACFAA7E00CE06B8 /* ZeeInApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZeeInApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83DCB25B1ACFAA7E00CE06B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83DCB25C1ACFAA7E00CE06B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -110,7 +118,11 @@
 				83DCB25C1ACFAA7E00CE06B8 /* AppDelegate.swift */,
 				83DCB25E1ACFAA7E00CE06B8 /* FirstViewController.swift */,
 				83DCB2601ACFAA7E00CE06B8 /* SecondViewController.swift */,
+				838D04AF1AD260DC007CC3EC /* ThirdViewController.swift */,
 				83DCB2621ACFAA7E00CE06B8 /* Main.storyboard */,
+				838D04B11AD263A3007CC3EC /* HelloScene.swift */,
+				838D04B71AD26767007CC3EC /* MyParticle.sks */,
+				838D04B81AD26767007CC3EC /* spark.png */,
 				83DCB25A1ACFAA7E00CE06B8 /* Supporting Files */,
 			);
 			path = ZeeInApp;
@@ -225,9 +237,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				833228D31AD0373700941A9A /* data1.plist in Resources */,
+				838D04BA1AD26767007CC3EC /* spark.png in Resources */,
 				83DCB2641ACFAA7E00CE06B8 /* Main.storyboard in Resources */,
 				83DCB2691ACFAA7E00CE06B8 /* LaunchScreen.xib in Resources */,
 				83DCB2661ACFAA7E00CE06B8 /* Images.xcassets in Resources */,
+				838D04B91AD26767007CC3EC /* MyParticle.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,7 +262,9 @@
 				83DCB2611ACFAA7E00CE06B8 /* SecondViewController.swift in Sources */,
 				833228D11AD036B600941A9A /* DataManager.swift in Sources */,
 				83DCB25D1ACFAA7E00CE06B8 /* AppDelegate.swift in Sources */,
+				838D04B01AD260DC007CC3EC /* ThirdViewController.swift in Sources */,
 				83DCB2811ACFAE6600CE06B8 /* BTService.swift in Sources */,
+				838D04B21AD263A3007CC3EC /* HelloScene.swift in Sources */,
 				83DCB2801ACFAE6600CE06B8 /* BTDiscovery.swift in Sources */,
 				83DCB25F1ACFAA7E00CE06B8 /* FirstViewController.swift in Sources */,
 			);

@@ -170,12 +170,12 @@
         <!--third-->
         <scene sceneID="wwM-83-ZPP">
             <objects>
-                <viewController id="fIu-cg-Ddo" sceneMemberID="viewController">
+                <viewController id="fIu-cg-Ddo" customClass="ThirdViewController" customModule="ZeeInApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="VEm-bt-MSQ"/>
                         <viewControllerLayoutGuide type="bottom" id="hXZ-9W-CkD"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="2WR-y2-yD2">
+                    <view key="view" contentMode="scaleToFill" id="2WR-y2-yD2" customClass="SKView">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
