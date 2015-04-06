@@ -19,9 +19,8 @@ void setup() {
     Wire.begin();
     Serial.begin(115200);
     BLE_Shield.begin(9600);
-    
     accelgyro.initialize();
-    //  audio_init(DEVICE_Flash,MODE_One_END,Vol);//初始化mp3模块
+    audio_init(DEVICE_Flash,MODE_One_END,Vol);//初始化mp3模块
 }
 
 /*
@@ -39,11 +38,11 @@ void loop() {
     //    Serial.print("   ");
     //    Serial.println(status);
     //Serial.println("action: " +action);
-    if (BLE_Shield.available()){
+//    if (BLE_Shield.available()){
         bleSend(movement,posture,status);
-    }else{
-        Serial.println("blue unavai");
-    }
+//    }else{
+//        Serial.println("blue unavai");
+//    }
     delay(500);
 }
 
@@ -156,7 +155,7 @@ void IMbalanced(){
 
 void bleSend(int mvmt, int pose, int state){
     char data[10];
-    sprintf(data,"{%d\t%d\t%d}",mvmt,pose,state);
+    sprintf(data,"%d\t%d\t%d",mvmt,pose,state);
     BLE_Shield.print(data); // send a byte with the value 45
     // delay(30);
     Serial.println(data);

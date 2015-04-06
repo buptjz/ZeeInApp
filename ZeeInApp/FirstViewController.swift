@@ -9,8 +9,6 @@
 import UIKit
 
 class FirstViewController: UIViewController {
-
-    
     @IBOutlet weak var imgBluetoothStatus: UIImageView!
     @IBOutlet weak var label1: UILabel!
     @IBOutlet weak var label2: UILabel!
