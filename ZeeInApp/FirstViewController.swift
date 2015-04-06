@@ -46,6 +46,9 @@ class FirstViewController: UIViewController {
         let userInfo = notification.userInfo as [String: String]
         let values:[String]! = userInfo["value"]?.componentsSeparatedByString("\t")
         
+        if values.count != 3 {
+            return
+        }
         dispatch_async(dispatch_get_main_queue(), {
             self.label1.text = values[0]
             self.label2.text = values[1]

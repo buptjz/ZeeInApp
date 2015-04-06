@@ -60,9 +60,10 @@ class BTService: NSObject, CBPeripheralDelegate {
             println("Error Reading characteristic value: \(error.localizedDescription)")
         }else{
             var data = characteristic.value
-            let str:String? = NSString(data: data, encoding: NSUTF8StringEncoding)
-            let connectionDetails = ["value": str!]
-            //            println("charac \(characteristic.UUID) updates value: \(str)")
+            let str:String = NSString(data: data, encoding: NSUTF8StringEncoding) ?? "blank"
+            let connectionDetails = ["value": str]
+            
+            println("charac \(characteristic.UUID) updates value: \(str)")
             NSNotificationCenter.defaultCenter().postNotificationName(BLEServiceReceiveNotification, object: self, userInfo: connectionDetails)
         }
     }
