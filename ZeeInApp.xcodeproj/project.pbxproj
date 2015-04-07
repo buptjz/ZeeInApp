@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		83296B561AD3BB0800B34D01 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83296B551AD3BB0800B34D01 /* GameViewController.swift */; };
+		83296B581AD3CAB600B34D01 /* tj.png in Resources */ = {isa = PBXBuildFile; fileRef = 83296B571AD3CAB600B34D01 /* tj.png */; };
+		83296B5A1AD3CC9200B34D01 /* FireParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = 83296B591AD3CC9200B34D01 /* FireParticle.sks */; };
+		83296B5D1AD3CCAC00B34D01 /* BlahParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = 83296B5B1AD3CCAC00B34D01 /* BlahParticle.sks */; };
+		83296B5E1AD3CCAC00B34D01 /* bokeh.png in Resources */ = {isa = PBXBuildFile; fileRef = 83296B5C1AD3CCAC00B34D01 /* bokeh.png */; };
 		833228D11AD036B600941A9A /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833228D01AD036B600941A9A /* DataManager.swift */; };
 		833228D31AD0373700941A9A /* data1.plist in Resources */ = {isa = PBXBuildFile; fileRef = 833228D21AD0373700941A9A /* data1.plist */; };
 		838D04B01AD260DC007CC3EC /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838D04AF1AD260DC007CC3EC /* ThirdViewController.swift */; };
@@ -37,6 +41,10 @@
 
 /* Begin PBXFileReference section */
 		83296B551AD3BB0800B34D01 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		83296B571AD3CAB600B34D01 /* tj.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tj.png; sourceTree = "<group>"; };
+		83296B591AD3CC9200B34D01 /* FireParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = FireParticle.sks; sourceTree = "<group>"; };
+		83296B5B1AD3CCAC00B34D01 /* BlahParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = BlahParticle.sks; sourceTree = "<group>"; };
+		83296B5C1AD3CCAC00B34D01 /* bokeh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bokeh.png; sourceTree = "<group>"; };
 		833228D01AD036B600941A9A /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		833228D21AD0373700941A9A /* data1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = data1.plist; sourceTree = "<group>"; };
 		838D04AF1AD260DC007CC3EC /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
@@ -133,7 +141,11 @@
 			isa = PBXGroup;
 			children = (
 				838D04B71AD26767007CC3EC /* MyParticle.sks */,
+				83296B591AD3CC9200B34D01 /* FireParticle.sks */,
+				83296B5B1AD3CCAC00B34D01 /* BlahParticle.sks */,
+				83296B5C1AD3CCAC00B34D01 /* bokeh.png */,
 				838D04B81AD26767007CC3EC /* spark.png */,
+				83296B571AD3CAB600B34D01 /* tj.png */,
 				83DCB2651ACFAA7E00CE06B8 /* Images.xcassets */,
 				83DCB2671ACFAA7E00CE06B8 /* LaunchScreen.xib */,
 				83DCB25B1ACFAA7E00CE06B8 /* Info.plist */,
@@ -240,10 +252,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				833228D31AD0373700941A9A /* data1.plist in Resources */,
+				83296B5A1AD3CC9200B34D01 /* FireParticle.sks in Resources */,
 				838D04BA1AD26767007CC3EC /* spark.png in Resources */,
 				83DCB2641ACFAA7E00CE06B8 /* Main.storyboard in Resources */,
 				83DCB2691ACFAA7E00CE06B8 /* LaunchScreen.xib in Resources */,
+				83296B5E1AD3CCAC00B34D01 /* bokeh.png in Resources */,
+				83296B5D1AD3CCAC00B34D01 /* BlahParticle.sks in Resources */,
 				83DCB2661ACFAA7E00CE06B8 /* Images.xcassets in Resources */,
+				83296B581AD3CAB600B34D01 /* tj.png in Resources */,
 				838D04B91AD26767007CC3EC /* MyParticle.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
