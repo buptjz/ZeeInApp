@@ -100,11 +100,12 @@
                         <outlet property="label1" destination="EUM-zm-aoj" id="RRK-xC-UGt"/>
                         <outlet property="label2" destination="Kzn-7q-jvf" id="CBR-Kc-mYa"/>
                         <outlet property="label3" destination="lFH-h0-Tpc" id="cpt-ez-0eO"/>
+                        <segue destination="mHm-Fw-pI3" kind="presentation" identifier="presentGameViewController" id="fzC-dU-sCD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="735" y="-204"/>
+            <point key="canvasLocation" x="723" y="-172"/>
         </scene>
         <!--统计-->
         <scene sceneID="wg7-f3-ORb">
@@ -145,6 +146,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="729" y="496"/>
+        </scene>
+        <!--Game View Controller-->
+        <scene sceneID="9cv-bE-ven">
+            <objects>
+                <viewController id="mHm-Fw-pI3" customClass="GameViewController" customModule="ZeeInApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oQB-pY-5mA"/>
+                        <viewControllerLayoutGuide type="bottom" id="DpC-ZT-eit"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cuw-Kr-sgx" customClass="SKView">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l5t-Vo-4cX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1518" y="-172"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">

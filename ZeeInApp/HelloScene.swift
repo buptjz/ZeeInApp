@@ -8,8 +8,9 @@
 
 import SpriteKit
 
-class HelloScene:SKScene {
-    var contentCreated:Bool = false
+class HelloScene : SKScene {
+    var contentCreated : Bool = false
+    var emitter : SKEmitterNode = SKEmitterNode(fileNamed: "MyParticle.sks")
     
     override func didMoveToView(view: SKView) {
         if !contentCreated {
@@ -17,19 +18,24 @@ class HelloScene:SKScene {
             contentCreated = true
         }
     }
-
+    
+    func updateParticleEmitter(speed : CGFloat, alpha : CGFloat){
+        //speed from 1 to 1000
+        emitter.particleSpeed = speed
+        emitter.particleAlpha = alpha
+    }
+    
     func createSceneContents() {
-//        backgroundColor = SKColor.blueColor()
+        //        backgroundColor = SKColor.blueColor()
         scaleMode = SKSceneScaleMode.AspectFit
-        addChild(newHelloNode())
-        
-        let sparkEmmiter = SKEmitterNode(fileNamed: "MyParticle.sks")
-        sparkEmmiter.position = CGPointMake(self.frame.size.width/2, self.frame.size.height/2 - 200)
-        sparkEmmiter.name = "sparkEmmitter"
-        sparkEmmiter.zPosition = 1
-        sparkEmmiter.targetNode = self
-        sparkEmmiter.particleLifetime = 1
-        self.addChild(sparkEmmiter)
+        //        addChild(newHelloNode())
+//        let sparkEmmiter = SKEmitterNode(fileNamed: "MyParticle.sks")
+        emitter.position = CGPointMake(self.frame.size.width/2, self.frame.size.height/2)
+        emitter.name = "sparkEmmitter"
+        emitter.zPosition = 1
+        emitter.targetNode = self
+        emitter.particleLifetime = 1
+        self.addChild(emitter)
     }
     
     func newHelloNode() -> SKLabelNode! {
@@ -37,9 +43,7 @@ class HelloScene:SKScene {
         helloNode.text = "Hello, World!"
         helloNode.fontSize = 42
         helloNode.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame))
-        
         helloNode.name = "helloNode"
-        
         return helloNode
     }
     
@@ -56,8 +60,6 @@ class HelloScene:SKScene {
             var moveSequence = SKAction.sequence([moveUp, zoom, pause, fadeAway, remove])
             helloNode.runAction(moveSequence)
         }
-        
-        
     }
 }
 

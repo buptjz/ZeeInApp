@@ -8,6 +8,8 @@
 
 import UIKit
 
+let kPresentGameViewControllerIdentifier = "presentGameViewController"
+
 class FirstViewController: UIViewController {
     @IBOutlet weak var imgBluetoothStatus: UIImageView!
     @IBOutlet weak var label1: UILabel!
@@ -40,19 +42,19 @@ class FirstViewController: UIViewController {
         btDiscoverySharedInstance
     }
     
-    func receivedValue(notification: NSNotification){
-        let userInfo = notification.userInfo as [String: String]
-        let values:[String]! = userInfo["value"]?.componentsSeparatedByString("\t")
-        
-        if values.count != 3 {
-            return
-        }
-        dispatch_async(dispatch_get_main_queue(), {
-            self.label1.text = values[0]
-            self.label2.text = values[1]
-            self.label3.text = values[2]
-        });
-    }
+//    func receivedValue(notification: NSNotification){
+//        let userInfo = notification.userInfo as [String: String]
+//        let values:[String]! = userInfo["value"]?.componentsSeparatedByString("\t")
+//        
+//        if values.count != 3 {
+//            return
+//        }
+//        dispatch_async(dispatch_get_main_queue(), {
+//            self.label1.text = values[0]
+//            self.label2.text = values[1]
+//            self.label3.text = values[2]
+//        });
+//    }
     
     
     func connectionChanged(notification: NSNotification) {
@@ -74,9 +76,10 @@ class FirstViewController: UIViewController {
         println("【按钮】开始练习")
         // Watch Bluetooth connection
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("connectionChanged:"), name: BLEServiceChangedStatusNotification, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("receivedValue:"), name: BLEServiceReceiveNotification, object: nil)
+
         connectBlueTooth()
         isPracticing = true
+        self.performSegueWithIdentifier(kPresentGameViewControllerIdentifier, sender: self)
     }
     
     @IBAction func stopPractice() {
