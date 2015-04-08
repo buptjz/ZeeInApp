@@ -10,7 +10,7 @@ import SpriteKit
 
 class HelloScene : SKScene {
     var contentCreated : Bool = false
-    var emitter : SKEmitterNode = SKEmitterNode(fileNamed: "MyParticle.sks")
+    var emitter : SKEmitterNode = SKEmitterNode(fileNamed: "magic.sks")
     
     override func didMoveToView(view: SKView) {
         if !contentCreated {
