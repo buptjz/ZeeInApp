@@ -19,10 +19,12 @@ class HelloScene : SKScene {
         }
     }
     
-    func updateParticleEmitter(speed : CGFloat, alpha : CGFloat){
+    func updateParticleEmitter(speed : CGFloat, pose : Int, stable:Bool){
+        //在这里修改粒子效果
         //speed from 1 to 1000
+        //pose :1 2 3
         emitter.particleSpeed = speed
-        emitter.particleAlpha = alpha
+        
     }
     
     func createSceneContents() {

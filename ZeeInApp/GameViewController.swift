@@ -38,7 +38,9 @@ class GameViewController: UIViewController {
             let spriteView:SKView = self.view as SKView
             let scene = spriteView.scene as HelloScene
             let speed = 10 * NSNumberFormatter().numberFromString(values[0])!.doubleValue
-            scene.updateParticleEmitter(CGFloat(speed), alpha: 0.5)
+            let pose = NSNumberFormatter().numberFromString(values[1])!.integerValue
+            let stability = NSNumberFormatter().numberFromString(values[2])!.boolValue
+            scene.updateParticleEmitter(CGFloat(speed), pose: pose, stable:stability)
         });
     }
     
