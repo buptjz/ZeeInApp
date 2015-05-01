@@ -13,7 +13,7 @@ class GameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let skView = view as SKView
+        let skView = view as! SKView
 //        skView.showsFPS = true
         skView.showsNodeCount = true
         
@@ -23,7 +23,7 @@ class GameViewController: UIViewController {
     }
     
     func receivedValue(notification: NSNotification){
-        let userInfo = notification.userInfo as [String: String]
+        let userInfo = notification.userInfo as! [String: String]
         let values:[String]! = userInfo["value"]?.componentsSeparatedByString("\t")
         
         if values.count != 3 {
@@ -35,8 +35,8 @@ class GameViewController: UIViewController {
 //            self.label2.text = values[1]
 //            self.label3.text = values[2]
 //            self.
-            let spriteView:SKView = self.view as SKView
-            let scene = spriteView.scene as HelloScene
+            let spriteView:SKView = self.view as! SKView
+            let scene = spriteView.scene as! HelloScene
             let speed = 10 * NSNumberFormatter().numberFromString(values[0])!.doubleValue
             let pose = NSNumberFormatter().numberFromString(values[1])!.integerValue
             let stability = NSNumberFormatter().numberFromString(values[2])!.boolValue
@@ -47,10 +47,10 @@ class GameViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
 //        var helloScene: HelloScene = HelloScene(size: CGSizeMake(768, 1024))
-        let skView = view as SKView
+        let skView = view as! SKView
         var helloScene: HelloScene = HelloScene(size: self.view.frame.size)
         
-        var spriteView:SKView = self.view as SKView
+        var spriteView:SKView = self.view as! SKView
         spriteView.presentScene(helloScene)
         spriteView.scene
     }

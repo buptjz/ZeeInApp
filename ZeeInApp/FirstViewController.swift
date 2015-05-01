@@ -59,7 +59,7 @@ class FirstViewController: UIViewController {
     
     func connectionChanged(notification: NSNotification) {
         // Connection status changed. Indicate on GUI.
-        let userInfo = notification.userInfo as [String: Bool]
+        let userInfo = notification.userInfo as! [String: Bool]
         dispatch_async(dispatch_get_main_queue(), {
             //Set image based on connection status
             if let isConnected: Bool = userInfo["isConnected"] {

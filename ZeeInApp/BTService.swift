@@ -60,7 +60,7 @@ class BTService: NSObject, CBPeripheralDelegate {
             println("Error Reading characteristic value: \(error.localizedDescription)")
         }else{
             var data = characteristic.value
-            let str:String = NSString(data: data, encoding: NSUTF8StringEncoding) ?? "blank"
+            let str:String = (NSString(data: data, encoding: NSUTF8StringEncoding) ?? "blank") as String
             let connectionDetails = ["value": str]
             
             println("charac \(characteristic.UUID) updates value: \(str)")
@@ -89,7 +89,7 @@ class BTService: NSObject, CBPeripheralDelegate {
         for service in peripheral.services {
             println("serveice uuid = \(service.UUID)")
             if service.UUID == BLEServiceUUID {
-                peripheral.discoverCharacteristics(nil, forService: service as CBService)
+                peripheral.discoverCharacteristics(nil, forService: service as! CBService)
             }
         }
     }
@@ -108,8 +108,8 @@ class BTService: NSObject, CBPeripheralDelegate {
         for characteristic in service.characteristics {
             println("characteristic == \(characteristic.UUID)")
             if characteristic.UUID == WRITEUUID {
-                self.positionCharacteristic = (characteristic as CBCharacteristic)
-                peripheral.setNotifyValue(true, forCharacteristic: characteristic as CBCharacteristic)
+                self.positionCharacteristic = (characteristic as! CBCharacteristic)
+                peripheral.setNotifyValue(true, forCharacteristic: characteristic as! CBCharacteristic)
                 // Send notification that Bluetooth is connected and all required characteristics are discovered
                 self.sendBTServiceNotificationWithIsBluetoothConnected(true)
             }

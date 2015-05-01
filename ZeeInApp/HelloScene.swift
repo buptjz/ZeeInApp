@@ -49,7 +49,7 @@ class HelloScene : SKScene {
         return helloNode
     }
     
-    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
         var helloNode:SKNode! = childNodeWithName("helloNode")
         if helloNode != nil {
             helloNode.name = nil

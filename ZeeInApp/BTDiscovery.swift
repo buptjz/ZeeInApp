@@ -12,7 +12,7 @@ import CoreBluetooth
 let btDiscoverySharedInstance = BTDiscovery();
 
 class BTDiscovery: NSObject, CBCentralManagerDelegate {
-    private let centralManager: CBCentralManager?
+    private var centralManager: CBCentralManager?
     private var peripheralBLE: CBPeripheral?
     
     override init() {
@@ -21,7 +21,6 @@ class BTDiscovery: NSObject, CBCentralManagerDelegate {
         centralManager = CBCentralManager(delegate: self, queue: centralQueue)
         //        centralManager = CBCentralManager(delegate: self, queue: nil)
     }
-    
     
     func startScanning() {
         //        centralManager!.scanForPeripheralsWithServices(nil, options: nil)

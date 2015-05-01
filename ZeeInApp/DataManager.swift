@@ -14,7 +14,7 @@ let dataFileName = "data1.plist"
 class DataManager{
     class func LoadData() -> NSMutableArray? {
         let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true) as NSArray
-        let documentsDirectory = paths[0] as String
+        let documentsDirectory = paths[0] as! String
         let path = documentsDirectory.stringByAppendingPathComponent(dataFileName)
         let fileManager = NSFileManager.defaultManager()
         if(!fileManager.fileExistsAtPath(path)) {
@@ -33,7 +33,7 @@ class DataManager{
     class func SaveData(data: NSArray?) {
         if let arr = data{
             let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true) as NSArray
-            let documentsDirectory = paths.objectAtIndex(0) as NSString
+            let documentsDirectory = paths.objectAtIndex(0) as! NSString
             let path = documentsDirectory.stringByAppendingPathComponent(dataFileName)
             arr.writeToFile(path, atomically: false)
         }
