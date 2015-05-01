@@ -2,4 +2,54 @@
 <Bucket
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ZeeInApp/FirstViewController.swift"
+            timestampString = "452149749.627484"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "connectionChanged(_:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ZeeInApp.FirstViewController.connectionChanged (ZeeInApp.FirstViewController)(ObjectiveC.NSNotification) -&gt; ()"
+                  moduleName = "ZeeInApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wangjz/ZeeInApp/ZeeInApp/FirstViewController.swift"
+                  timestampString = "452153469.193559"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "64"
+                  endingLineNumber = "64"
+                  offsetFromSymbolStart = "32">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ZeeInApp.FirstViewController.(connectionChanged (ZeeInApp.FirstViewController) -&gt; (ObjectiveC.NSNotification) -&gt; ()).(closure #1)"
+                  moduleName = "ZeeInApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wangjz/ZeeInApp/ZeeInApp/FirstViewController.swift"
+                  timestampString = "452153469.193783"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "20">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

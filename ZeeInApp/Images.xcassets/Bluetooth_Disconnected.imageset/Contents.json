@@ -12,13 +12,13 @@
     },
     {
       "idiom" : "iphone",
-      "filename" : "Bluetooth_Disconnected_380x142-1.png",
       "subtype" : "retina4",
       "scale" : "2x"
     },
     {
       "idiom" : "iphone",
-      "scale" : "3x"
+      "scale" : "3x",
+      "filename" : "Bluetooth_Disconnected_380x142-1.png"
     }
   ],
   "info" : {

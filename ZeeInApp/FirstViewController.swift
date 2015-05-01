@@ -11,7 +11,7 @@ import UIKit
 let kPresentGameViewControllerIdentifier = "presentGameViewController"
 
 class FirstViewController: UIViewController {
-    var chosenType : String? = kSceneTypeSenlin //kSceneTypeHaibian
+    var chosenType : String? = kSceneTypeHaibian //kSceneTypeHaibian
     
     @IBOutlet weak var imgBluetoothStatus: UIImageView!
     @IBOutlet weak var label1: UILabel!
