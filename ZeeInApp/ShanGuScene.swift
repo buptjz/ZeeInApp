@@ -20,11 +20,11 @@ class ShanGuScene : SKScene {
         }
     }
     
-    func updateParticleEmitter(speed : CGFloat, pose : Int, stable:Bool){
-        //在这里修改粒子效果
-        //speed from 1 to 1000
-        //pose :1 2 3
+    /*在这里修改粒子效果*/
+    func updateParticleEmitter(movement : Int, speedScore : Int, steadyScore:Int,posture:Int,status:Int){
+        //movement反映速度的一个量,speedScore速度得分,steadyScore稳定得分,posture姿态,status状态
         emitter.particleSpeed = speed
+        
         
     }
     

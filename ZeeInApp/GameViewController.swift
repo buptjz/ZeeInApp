@@ -11,8 +11,45 @@ import SpriteKit
 
 
 class GameViewController: UIViewController {
+    @IBOutlet weak var zongfenLabel: UILabel!
+    @IBOutlet weak var kongzhidefenLabel: UILabel!
+    @IBOutlet weak var pinghengdefenLabel: UILabel!
+    @IBOutlet weak var wanchengshijianLabel: UILabel!
+    
+    @IBOutlet weak var zhuangzhuSlider: UISlider!
+    @IBOutlet weak var qingxuSlider: UISlider!
+    @IBOutlet weak var jingliSlider: UISlider!
+    
     var scenType : String?
     var mysk : SKView?
+    
+    var updateTimes:Int = 0 //获取分数的次数
+    var wanchengshijian = 0
+    var pinghengdefenArray : [Int] = [Int]()
+    var kongzhidefenArray : [Int] = [Int]()
+    var shishidefenArray : [Int] = [Int]()
+    
+    func computeAverageDouble(arr: [Double], num: Int)->Double{
+        var accum : Double = 0
+        for d in arr{
+            accum += d
+        }
+        return accum / Double(num)
+    }
+    
+    func computeAverageInt(arr: [Int], num: Int)-> Int{
+        if num == 0{
+            return 0
+        }
+        
+        var accum : Int = 0
+        for d in arr{
+            accum += d
+        }
+        return accum / num
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         println("【Scene】" + self.scenType! + " In GameViewController ViewDidLoad")
@@ -39,28 +76,31 @@ class GameViewController: UIViewController {
             return
         }
         
+        
+        let movement = Int(NSNumberFormatter().numberFromString(values[0])!.intValue)//反映速度的一个量
+        let speedScore = Int(NSNumberFormatter().numberFromString(values[1])!.intValue)//速度得分
+        let steadyScore = Int(NSNumberFormatter().numberFromString(values[2])!.intValue)//稳定得分
+        let posture = Int(NSNumberFormatter().numberFromString(values[3])!.intValue)//姿态
+        let status = Int(NSNumberFormatter().numberFromString(values[4])!.intValue)//状态
+        
+//        let speed = 10 * NSNumberFormatter().numberFromString(values[0])!.doubleValue
+//        let pose = NSNumberFormatter().numberFromString(values[1])!.integerValue
+//        let stability = NSNumberFormatter().numberFromString(values[2])!.boolValue
+        
+        //update UI should be in main queue
         dispatch_async(dispatch_get_main_queue(), {
-//            self.label1.text = values[0]
-//            self.label2.text = values[1]
-//            self.label3.text = values[2]
-//            self.
-//            let mysk:SKView = self.view as! SKView
-            let speed = 10 * NSNumberFormatter().numberFromString(values[0])!.doubleValue
-            let pose = NSNumberFormatter().numberFromString(values[1])!.integerValue
-            let stability = NSNumberFormatter().numberFromString(values[2])!.boolValue
-            
             if self.scenType == kSceneTypeShuiZhong{
                 let scene = self.mysk!.scene as! ShuiZhongScene
-                scene.updateParticleEmitter(CGFloat(speed), pose: pose, stable:stability)
+                scene.updateParticleEmitter(movement, speedScore: speedScore, steadyScore: steadyScore, posture: posture, status: status)
             }else if self.scenType == kSceneTypeSenlin{
                 let scene = self.mysk!.scene as! SenlinScene
-                scene.updateParticleEmitter(CGFloat(speed), pose: pose, stable:stability)
+                scene.updateParticleEmitter(movement, speedScore: speedScore, steadyScore: steadyScore, posture: posture, status: status)
             }else if self.scenType == kSceneTypeShanGu{
                 let scene = self.mysk!.scene as! ShanGuScene
-                scene.updateParticleEmitter(CGFloat(speed), pose: pose, stable:stability)
+                scene.updateParticleEmitter(movement, speedScore: speedScore, steadyScore: steadyScore, posture: posture, status: status)
             }else if self.scenType == kSceneTypeHaibian{
                 let scene = self.mysk!.scene as! HaibianScene
-                scene.updateParticleEmitter(CGFloat(speed), pose: pose, stable:stability)
+                scene.updateParticleEmitter(movement, speedScore: speedScore, steadyScore: steadyScore, posture: posture, status: status)
             }
 
         });
@@ -82,17 +122,26 @@ class GameViewController: UIViewController {
     
     func buttonClick(sender: AnyObject){
         //fix sprite bugs
+        /*Release SKView Things*/
         mysk!.paused = true
         mysk!.scene?.removeFromParent()
         mysk!.removeFromSuperview()
-//        mysk!.scene.chil
         for child in mysk!.scene!.children{
             let c = child as! SKNode
             c.removeAllActions()
             c.removeAllChildren()
         }
         mysk!.scene!.removeAllChildren()
-
+        
+        /*Calculate Score*/
+        let pinghengdefen = computeAverageInt(pinghengdefenArray, num: updateTimes)
+        self.pinghengdefenLabel.text = "\(pinghengdefen)"
+        
+        let kongzhidefen = computeAverageInt(kongzhidefenArray, num: updateTimes)
+        self.kongzhidefenLabel.text = "\(kongzhidefen)"
+        
+        let zongfen = computeAverageInt(shishidefenArray, num: updateTimes)
+        self.zongfenLabel.text = "\(zongfen)"
     }
     
     @IBAction func finishBtnPress(sender: AnyObject) {
