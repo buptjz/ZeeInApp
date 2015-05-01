@@ -59,7 +59,6 @@ class GameViewController: UIViewController {
         mysk!.showsNodeCount = true
         let button = UIButton(frame:CGRect(origin: CGPointMake(800, 600), size:CGSizeMake(300,150)))
         button.setTitle("退出", forState:UIControlState.Normal)
-//        button.set
         button.addTarget(self, action:"buttonClick:", forControlEvents: UIControlEvents.TouchUpInside)
         mysk!.addSubview(button)
         
@@ -72,20 +71,21 @@ class GameViewController: UIViewController {
         let userInfo = notification.userInfo as! [String: String]
         let values:[String]! = userInfo["value"]?.componentsSeparatedByString("\t")
         
-        if values.count != 3 {
+        if values.count != 5 {
             return
         }
         
-        
+        //解析 arduino 蓝牙模块传来的数据
         let movement = Int(NSNumberFormatter().numberFromString(values[0])!.intValue)//反映速度的一个量
         let speedScore = Int(NSNumberFormatter().numberFromString(values[1])!.intValue)//速度得分
         let steadyScore = Int(NSNumberFormatter().numberFromString(values[2])!.intValue)//稳定得分
         let posture = Int(NSNumberFormatter().numberFromString(values[3])!.intValue)//姿态
         let status = Int(NSNumberFormatter().numberFromString(values[4])!.intValue)//状态
         
-//        let speed = 10 * NSNumberFormatter().numberFromString(values[0])!.doubleValue
-//        let pose = NSNumberFormatter().numberFromString(values[1])!.integerValue
-//        let stability = NSNumberFormatter().numberFromString(values[2])!.boolValue
+        //ios端保存每一次有用的读入
+        pinghengdefenArray.append(steadyScore)//涵姐说：平衡就是稳定！
+        kongzhidefenArray.append(speedScore)
+        updateTimes += 1
         
         //update UI should be in main queue
         dispatch_async(dispatch_get_main_queue(), {
@@ -115,10 +115,10 @@ class GameViewController: UIViewController {
         }else if scenType == kSceneTypeShanGu{
             self.mysk!.presentScene(ShanGuScene(size: self.view.frame.size))
         }else if scenType == kSceneTypeHaibian{
-//            var scene: HaibianScene =
             self.mysk!.presentScene(HaibianScene(size: self.view.frame.size))
         }
     }
+    
     
     func buttonClick(sender: AnyObject){
         //fix sprite bugs

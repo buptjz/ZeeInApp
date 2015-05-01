@@ -64,16 +64,15 @@ class FirstViewController: UIViewController {
         let userInfo = notification.userInfo as! [String: Bool]
         dispatch_async(dispatch_get_main_queue(), {
             //Set image based on connection status
-            if let isConnected: Bool = userInfo["isConnected"] {
-                if isConnected {
-                    self.imgBluetoothStatus.image = UIImage(named: "Bluetooth_Connected")
-                } else {
-                    self.imgBluetoothStatus.image = UIImage(named: "Bluetooth_Disconnected")
-                }
-            }
+//            if let isConnected: Bool = userInfo["isConnected"] {
+//                if isConnected {
+//                    self.imgBluetoothStatus.image = UIImage(named: "Bluetooth_Connected")
+//                } else {
+//                    self.imgBluetoothStatus.image = UIImage(named: "Bluetooth_Disconnected")
+//                }
+//            }
         });
     }
-    
     
     @IBAction func startBtnPressed(sender: UIButton) {
         println("【按钮\(sender.tag)】开始练习")
@@ -81,6 +80,16 @@ class FirstViewController: UIViewController {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("connectionChanged:"), name: BLEServiceChangedStatusNotification, object: nil)
         connectBlueTooth()
         isPracticing = true
+        if sender.tag == 1{
+            self.chosenType = kSceneTypeShanGu
+        }else if sender.tag == 2{
+            self.chosenType = kSceneTypeShuiZhong
+        }else if sender.tag == 3 {
+            self.chosenType = kSceneTypeHaibian
+        }else if sender.tag == 4 {
+            self.chosenType = kSceneTypeSenlin
+        }
+
         self.performSegueWithIdentifier(kPresentGameViewControllerIdentifier, sender: self)
     }
     

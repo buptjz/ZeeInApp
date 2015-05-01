@@ -28,7 +28,8 @@ class ShuiZhongScene : SKScene {
     /*在这里修改粒子效果*/
     func updateParticleEmitter(movement : Int, speedScore : Int, steadyScore:Int,posture:Int,status:Int){
         //movement反映速度的一个量,speedScore速度得分,steadyScore稳定得分,posture姿态,status状态
-        emitter.particleSpeed = speed
+        println("mvmt:\(movement)")
+        emitter.particleSpeed = 10 * CGFloat(movement)
     }
     
     func createContent() {
