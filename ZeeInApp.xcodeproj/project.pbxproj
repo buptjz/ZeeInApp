@@ -15,10 +15,18 @@
 		83296B5E1AD3CCAC00B34D01 /* bokeh.png in Resources */ = {isa = PBXBuildFile; fileRef = 83296B5C1AD3CCAC00B34D01 /* bokeh.png */; };
 		833228D11AD036B600941A9A /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833228D01AD036B600941A9A /* DataManager.swift */; };
 		833228D31AD0373700941A9A /* data1.plist in Resources */ = {isa = PBXBuildFile; fileRef = 833228D21AD0373700941A9A /* data1.plist */; };
+		837C4A6B1AF3376000EC742F /* SenlinScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837C4A681AF3376000EC742F /* SenlinScene.swift */; };
+		837C4A6C1AF3376000EC742F /* ShanGuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837C4A691AF3376000EC742F /* ShanGuScene.swift */; };
+		837C4A6E1AF3393F00EC742F /* HaibianScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837C4A6D1AF3393F00EC742F /* HaibianScene.swift */; };
 		838D04B01AD260DC007CC3EC /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838D04AF1AD260DC007CC3EC /* ThirdViewController.swift */; };
-		838D04B21AD263A3007CC3EC /* HelloScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838D04B11AD263A3007CC3EC /* HelloScene.swift */; };
+		838D04B21AD263A3007CC3EC /* ShuiZhongScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838D04B11AD263A3007CC3EC /* ShuiZhongScene.swift */; };
 		838D04B91AD26767007CC3EC /* taiji.sks in Resources */ = {isa = PBXBuildFile; fileRef = 838D04B71AD26767007CC3EC /* taiji.sks */; };
 		838D04BA1AD26767007CC3EC /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 838D04B81AD26767007CC3EC /* spark.png */; };
+		83C5FDB81AF31C05000A398D /* shuizhong.sks in Resources */ = {isa = PBXBuildFile; fileRef = 83C5FDB31AF31C05000A398D /* shuizhong.sks */; };
+		83C5FDB91AF31C05000A398D /* senlin.sks in Resources */ = {isa = PBXBuildFile; fileRef = 83C5FDB41AF31C05000A398D /* senlin.sks */; };
+		83C5FDBA1AF31C05000A398D /* huaban.png in Resources */ = {isa = PBXBuildFile; fileRef = 83C5FDB51AF31C05000A398D /* huaban.png */; };
+		83C5FDBB1AF31C05000A398D /* shangu.sks in Resources */ = {isa = PBXBuildFile; fileRef = 83C5FDB61AF31C05000A398D /* shangu.sks */; };
+		83C5FDBC1AF31C05000A398D /* haibian.sks in Resources */ = {isa = PBXBuildFile; fileRef = 83C5FDB71AF31C05000A398D /* haibian.sks */; };
 		83DCB25D1ACFAA7E00CE06B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DCB25C1ACFAA7E00CE06B8 /* AppDelegate.swift */; };
 		83DCB25F1ACFAA7E00CE06B8 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DCB25E1ACFAA7E00CE06B8 /* FirstViewController.swift */; };
 		83DCB2611ACFAA7E00CE06B8 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DCB2601ACFAA7E00CE06B8 /* SecondViewController.swift */; };
@@ -49,10 +57,18 @@
 		83296B5C1AD3CCAC00B34D01 /* bokeh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bokeh.png; sourceTree = "<group>"; };
 		833228D01AD036B600941A9A /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		833228D21AD0373700941A9A /* data1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = data1.plist; sourceTree = "<group>"; };
+		837C4A681AF3376000EC742F /* SenlinScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SenlinScene.swift; sourceTree = "<group>"; };
+		837C4A691AF3376000EC742F /* ShanGuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShanGuScene.swift; sourceTree = "<group>"; };
+		837C4A6D1AF3393F00EC742F /* HaibianScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HaibianScene.swift; sourceTree = "<group>"; };
 		838D04AF1AD260DC007CC3EC /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
-		838D04B11AD263A3007CC3EC /* HelloScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelloScene.swift; sourceTree = "<group>"; };
+		838D04B11AD263A3007CC3EC /* ShuiZhongScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShuiZhongScene.swift; sourceTree = "<group>"; };
 		838D04B71AD26767007CC3EC /* taiji.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = taiji.sks; sourceTree = "<group>"; };
 		838D04B81AD26767007CC3EC /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		83C5FDB31AF31C05000A398D /* shuizhong.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = shuizhong.sks; sourceTree = "<group>"; };
+		83C5FDB41AF31C05000A398D /* senlin.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = senlin.sks; sourceTree = "<group>"; };
+		83C5FDB51AF31C05000A398D /* huaban.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = huaban.png; sourceTree = "<group>"; };
+		83C5FDB61AF31C05000A398D /* shangu.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = shangu.sks; sourceTree = "<group>"; };
+		83C5FDB71AF31C05000A398D /* haibian.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = haibian.sks; sourceTree = "<group>"; };
 		83DCB2571ACFAA7E00CE06B8 /* ZeeInApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZeeInApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83DCB25B1ACFAA7E00CE06B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83DCB25C1ACFAA7E00CE06B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +120,21 @@
 			name = bluetooth;
 			sourceTree = "<group>";
 		};
+		83C5FDB21AF31B7B000A398D /* particles */ = {
+			isa = PBXGroup;
+			children = (
+				837C4A6D1AF3393F00EC742F /* HaibianScene.swift */,
+				837C4A681AF3376000EC742F /* SenlinScene.swift */,
+				837C4A691AF3376000EC742F /* ShanGuScene.swift */,
+				838D04B11AD263A3007CC3EC /* ShuiZhongScene.swift */,
+				83C5FDB31AF31C05000A398D /* shuizhong.sks */,
+				83C5FDB41AF31C05000A398D /* senlin.sks */,
+				83C5FDB61AF31C05000A398D /* shangu.sks */,
+				83C5FDB71AF31C05000A398D /* haibian.sks */,
+			);
+			name = particles;
+			sourceTree = "<group>";
+		};
 		83DCB24E1ACFAA7E00CE06B8 = {
 			isa = PBXGroup;
 			children = (
@@ -125,10 +156,10 @@
 		83DCB2591ACFAA7E00CE06B8 /* ZeeInApp */ = {
 			isa = PBXGroup;
 			children = (
+				83C5FDB21AF31B7B000A398D /* particles */,
 				834D94291AD0DADA005839BA /* bluetooth */,
 				834D94281AD0DACC005839BA /* data */,
 				83DCB25C1ACFAA7E00CE06B8 /* AppDelegate.swift */,
-				838D04B11AD263A3007CC3EC /* HelloScene.swift */,
 				83296B551AD3BB0800B34D01 /* GameViewController.swift */,
 				83DCB25E1ACFAA7E00CE06B8 /* FirstViewController.swift */,
 				83DCB2601ACFAA7E00CE06B8 /* SecondViewController.swift */,
@@ -150,6 +181,7 @@
 				838D04B81AD26767007CC3EC /* spark.png */,
 				83296B571AD3CAB600B34D01 /* tj.png */,
 				83DCB2651ACFAA7E00CE06B8 /* Images.xcassets */,
+				83C5FDB51AF31C05000A398D /* huaban.png */,
 				83DCB2671ACFAA7E00CE06B8 /* LaunchScreen.xib */,
 				83DCB25B1ACFAA7E00CE06B8 /* Info.plist */,
 			);
@@ -259,9 +291,14 @@
 				830D975E1AD5704300CC8814 /* magic.sks in Resources */,
 				838D04BA1AD26767007CC3EC /* spark.png in Resources */,
 				83DCB2641ACFAA7E00CE06B8 /* Main.storyboard in Resources */,
+				83C5FDB91AF31C05000A398D /* senlin.sks in Resources */,
+				83C5FDBB1AF31C05000A398D /* shangu.sks in Resources */,
 				83DCB2691ACFAA7E00CE06B8 /* LaunchScreen.xib in Resources */,
 				83296B5E1AD3CCAC00B34D01 /* bokeh.png in Resources */,
 				83296B5D1AD3CCAC00B34D01 /* BlahParticle.sks in Resources */,
+				83C5FDBC1AF31C05000A398D /* haibian.sks in Resources */,
+				83C5FDB81AF31C05000A398D /* shuizhong.sks in Resources */,
+				83C5FDBA1AF31C05000A398D /* huaban.png in Resources */,
 				83DCB2661ACFAA7E00CE06B8 /* Images.xcassets in Resources */,
 				83296B581AD3CAB600B34D01 /* tj.png in Resources */,
 				838D04B91AD26767007CC3EC /* taiji.sks in Resources */,
@@ -282,13 +319,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				837C4A6B1AF3376000EC742F /* SenlinScene.swift in Sources */,
 				83DCB2611ACFAA7E00CE06B8 /* SecondViewController.swift in Sources */,
 				833228D11AD036B600941A9A /* DataManager.swift in Sources */,
+				837C4A6E1AF3393F00EC742F /* HaibianScene.swift in Sources */,
 				83DCB25D1ACFAA7E00CE06B8 /* AppDelegate.swift in Sources */,
 				838D04B01AD260DC007CC3EC /* ThirdViewController.swift in Sources */,
 				83296B561AD3BB0800B34D01 /* GameViewController.swift in Sources */,
 				83DCB2811ACFAE6600CE06B8 /* BTService.swift in Sources */,
-				838D04B21AD263A3007CC3EC /* HelloScene.swift in Sources */,
+				837C4A6C1AF3376000EC742F /* ShanGuScene.swift in Sources */,
+				838D04B21AD263A3007CC3EC /* ShuiZhongScene.swift in Sources */,
 				83DCB2801ACFAE6600CE06B8 /* BTDiscovery.swift in Sources */,
 				83DCB25F1ACFAA7E00CE06B8 /* FirstViewController.swift in Sources */,
 			);
@@ -366,7 +406,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -403,7 +443,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -418,7 +458,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = ZeeInApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -433,7 +473,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = ZeeInApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

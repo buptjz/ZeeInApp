@@ -11,6 +11,8 @@ import UIKit
 let kPresentGameViewControllerIdentifier = "presentGameViewController"
 
 class FirstViewController: UIViewController {
+    var chosenType : String? = kSceneTypeSenlin //kSceneTypeHaibian
+    
     @IBOutlet weak var imgBluetoothStatus: UIImageView!
     @IBOutlet weak var label1: UILabel!
     @IBOutlet weak var label2: UILabel!
@@ -76,7 +78,6 @@ class FirstViewController: UIViewController {
         println("【按钮】开始练习")
         // Watch Bluetooth connection
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("connectionChanged:"), name: BLEServiceChangedStatusNotification, object: nil)
-
         connectBlueTooth()
         isPracticing = true
         self.performSegueWithIdentifier(kPresentGameViewControllerIdentifier, sender: self)
@@ -104,6 +105,14 @@ class FirstViewController: UIViewController {
         arr?.addObject("4")
         println("\(arr)")
         DataManager.SaveData(arr)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        http://stackoverflow.com/questions/26089152/sending-data-with-segue-with-swift
+        if segue.identifier == "presentGameViewController"{
+        let gmv = segue.destinationViewController as! GameViewController
+            gmv.scenType = self.chosenType
+        }
     }
 }
 
