@@ -74,14 +74,16 @@ class FirstViewController: UIViewController {
         });
     }
     
-    @IBAction func startPractice() {
-        println("【按钮】开始练习")
+    
+    @IBAction func startBtnPressed(sender: UIButton) {
+        println("【按钮\(sender.tag)】开始练习")
         // Watch Bluetooth connection
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("connectionChanged:"), name: BLEServiceChangedStatusNotification, object: nil)
         connectBlueTooth()
         isPracticing = true
         self.performSegueWithIdentifier(kPresentGameViewControllerIdentifier, sender: self)
     }
+    
     
     @IBAction func stopPractice() {
         println("【按钮】结束练习")

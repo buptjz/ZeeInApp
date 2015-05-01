@@ -20,8 +20,9 @@ class GameViewController: UIViewController {
         mysk = SKView(frame: self.view.frame)
         self.view.addSubview(mysk!)
         mysk!.showsNodeCount = true
-        let button = UIButton(frame:CGRect(origin: CGPointMake(100.0, 110.0), size:CGSizeMake(150,50)))
-        button.setTitle("OK", forState:UIControlState.Normal)
+        let button = UIButton(frame:CGRect(origin: CGPointMake(800, 600), size:CGSizeMake(300,150)))
+        button.setTitle("退出", forState:UIControlState.Normal)
+//        button.set
         button.addTarget(self, action:"buttonClick:", forControlEvents: UIControlEvents.TouchUpInside)
         mysk!.addSubview(button)
         
